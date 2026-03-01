@@ -1,4 +1,4 @@
-# Visceral Fat Prediction from Facial Images (Hackathon)
+# Visceral Fat Prediction from Facial Images (6hr Hackathon)
 
 Rapid-prototyping project for training a model to predict visceral fat from facial images, with a focus on shipping a working demo quickly.
 

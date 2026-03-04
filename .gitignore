@@ -33,15 +33,23 @@ htmlcov/
 
 # OS files
 .DS_Store
+._*
+__MACOSX/
+.Spotlight-V100/
+.Trashes/
 
 # Logs and artifacts
 logs/
 *.log
 artifacts/checkpoints/
 artifacts/exports/
+artifacts/face_to_visceral/checkpoints/
+artifacts/face_to_visceral/csv_logs/
+artifacts/face_to_visceral/lightning_logs/
+artifacts/face_to_visceral/wandb/
 
 # Local env
 .env
 
 # Data (keep structure but not payloads)
-data/
+data/*

@@ -1,5 +1,4 @@
-# (Face2Visceral) Visceral Fat Prediction from Facial Images (6hr Hackathon)
->>>>>>> 51774e5 (hackathon end)
+# (Face2Visceral) Visceral Fat Prediction from Facial Images [6hr Hackathon]
 
 Predict visceral fat ratio from facial imagery using a PyTorch Lightning model and a lightweight FastAPI inference service.
 

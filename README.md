@@ -1,8 +1,8 @@
-# (Face2Visceral) Visceral Fat Prediction from Facial Images [6hr Hackathon]
+# Face2Visceral: Visceral Fat Prediction from Facial Images [6hr Hackathon]
 
 Predict visceral fat ratio from facial imagery using a PyTorch Lightning model and a lightweight FastAPI inference service.
 
-## Quick Demo (for visitors)
+## Quick Demo
 
 This is the fastest way to interact with the project.
 
@@ -15,6 +15,20 @@ pip install -r requirements.txt
 ```
 
 ### 2) Start the inference API (with a trained checkpoint)
+
+### Checkpoint download
+
+Download the model checkpoint from the `v0.1.0` release page:
+
+- https://github.com/EngEmmanuel/face2visceral/releases/tag/v0.1.0
+
+Then place the downloaded `.ckpt` file in:
+
+- `artifacts/face_to_visceral/checkpoints/`
+
+Example expected path:
+
+- `artifacts/face_to_visceral/checkpoints/last.ckpt`
 
 ```bash
 python scripts/serve/inference_api.py \

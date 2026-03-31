@@ -14,29 +14,25 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 2) Start the inference API (with a trained checkpoint)
+### 2) Download the model checkpoint
 
-### Checkpoint download
+```bash
+mkdir -p artifacts/face_to_visceral/checkpoints
+curl -L https://github.com/EngEmmanuel/face2visceral/releases/download/v0.1.0/last.ckpt \
+     -o artifacts/face_to_visceral/checkpoints/last.ckpt
+```
 
-Download the model checkpoint from the `v0.1.0` release page:
+Alternatively, download `last.ckpt` manually from the [v0.1.0 release page](https://github.com/EngEmmanuel/face2visceral/releases/tag/v0.1.0) and place it in `artifacts/face_to_visceral/checkpoints/`.
 
-- https://github.com/EngEmmanuel/face2visceral/releases/tag/v0.1.0
-
-Then place the downloaded `.ckpt` file in:
-
-- `artifacts/face_to_visceral/checkpoints/`
-
-Example expected path:
-
-- `artifacts/face_to_visceral/checkpoints/last.ckpt`
+### 3) Start the inference API
 
 ```bash
 python scripts/serve/inference_api.py \
-	--checkpoint artifacts/face_to_visceral/checkpoints/<best>.ckpt \
+	--checkpoint artifacts/face_to_visceral/checkpoints/last.ckpt \
 	--port 8000
 ```
 
-### 3) Start the frontend
+### 4) Start the frontend
 
 ```bash
 cd elegant
@@ -71,7 +67,7 @@ Use these commands when you already have a trained checkpoint.
 
 ```bash
 python scripts/predict/predict_face_visceral_ratio.py \
-	--checkpoint artifacts/face_to_visceral/checkpoints/<best>.ckpt \
+	--checkpoint artifacts/face_to_visceral/checkpoints/last.ckpt \
 	--face-input path/to/face_or_folder \
 	--ct-input path/to/ct_or_folder
 ```
